@@ -536,17 +536,6 @@
             var ETHBlockByte = contract.at(address);
             var step = 1000000000000000; // 0.001 ETH
 
-
-            web3.eth.getBlockNumber(function (e, r) {
-                ETHBlockByte.allEvents({
-                    fromBlock: r - 100,
-                    toBlock: 'latest'
-                }, function (e, r) {
-                    debugger
-                });
-
-
-            });
             init(address, ETHBlockByte);
 
             return {play: play};
